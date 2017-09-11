@@ -612,7 +612,7 @@ def f55(i):
 	return v1 + v2 + v3
 
 
-path = "/home/avikalp/semester6/SIGKDD/photo_net_dataset/images/"
+path = "/home/avikalp/semester6/SIGIR/photonet_dataset/images/"
 
 if __name__ == '__main__':
 	# graph = [[1, 1, 0, 0, 0],
