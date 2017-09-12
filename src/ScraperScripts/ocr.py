@@ -18,7 +18,7 @@ def main():
 	"""
 	print("Note that your current csv should be named input.csv and you will get output.csv with the appended column")
 	ispresent = {}
-	list_of_required = np.load("../../Data/dicount_wordlist.npy")
+	list_of_required = np.load("../../data/dicount_wordlist.npy")
 	folder_name = raw_input("Enter the name of the folder containing images in the current directory: \n")
 	direc_path = str(os.getcwd() + "/" + str(folder_name))
 	dir = os.getcwd() + "/" + str(folder_name); 

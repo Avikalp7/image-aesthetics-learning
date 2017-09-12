@@ -8,12 +8,12 @@ import csv
 
 def main():
 	# Reading the data csv with urls for images in photo-net dataset
-	reader = csv.reader(open('../../Data/photonet_dataset/photonet_data.csv', 'r'))
+	reader = csv.reader(open('../../data/photonet_dataset/photonet_data.csv', 'r'))
 	row = next(reader)
 	
 	url_base = "http://gallery.photo.net/photo/"
 	url_end = "-md.jpg"
-	path = "../../Data/photonet_dataset/images/"
+	path = "../../data/photonet_dataset/images/"
 	
 	# Indices for which image fails to download
 	bad_indices = []
