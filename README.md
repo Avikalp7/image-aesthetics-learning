@@ -4,7 +4,7 @@ Implementation of the model, and datasets presented in the paper *[Social Media 
 
 ![](./SIGIR2017_Poster.jpg)
 
-## Aesthetic Feature to Engagement Learning on Photnet Data
+## Aesthetic Feature to Engagement Learning on PhotoNet Data
 
 ### Photo.Net Dataset
 
