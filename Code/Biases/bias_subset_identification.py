@@ -1,11 +1,17 @@
-import csv
-import os
-import math
+"""
+Work in this script will involve reading the ocr, neural-talk and tweet-text associated
+with each twitter image in the dataset.
+A subset of biases are identified here.
+"""
 import numpy as np
+
+import os
+import csv
+import math
 
 
 def main():
-	reader = csv.reader(open('/home/avikalp/semester6/SIGIR/implementation/image_data/output5_norm_score.csv', 'r'))
+	reader = csv.reader(open('../../Data/TwitterData.csv', 'r'))
 	ocr_list_basic = ["discount ", "offer ", "scheme", "retweet", "rt", "off ", "sale", "% "]
 	ocr_list_extended = np.load("../../Data/discount_terms.npy")
 	ocr_list = ocr_list_basic + ocr_list_extended
@@ -21,6 +27,7 @@ def main():
 
 	tweet_count, ocr_count, neural_count, neural_human_count, date_count = [0]*5
 	count = 1
+
 	for row in reader:
 		date = row[3]
 		tweet_text = row[8].lower()
@@ -90,4 +97,3 @@ def main():
 
 if __name__ == "__main__":
 	main()
-	return
