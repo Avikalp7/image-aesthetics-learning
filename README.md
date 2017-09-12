@@ -20,4 +20,4 @@ Since our final aim is learning on interpretable image features that easily tran
 
 The script for features - "*selected_features.py*" resides in the "FeatureExtraction" directory, where given the folder containing your images of interest, the feature vector for each is computed and the feature matrix is saved as a *.npy* file.
 
-
+![](./images/sigir1.png)
