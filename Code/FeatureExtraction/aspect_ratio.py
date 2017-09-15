@@ -1,3 +1,7 @@
+"""
+This script goes through the image folder (for image indices in good_indices)
+and saves the aspect ratio information in ../../Data/images_size.npy
+"""
 from PIL import Image
 import numpy as np
 
@@ -12,7 +16,7 @@ def main():
         img = Image.open(current_image)
         img = np.array(img)
         image_sizes.append([img.shape[0], img.shape[1]])
-    np.save('../../Data/image_sizes_40p.npy', image_sizes)
+    np.save('../../Data/image_sizes.npy', image_sizes)
 
 
 if __name__ == "__main__":
