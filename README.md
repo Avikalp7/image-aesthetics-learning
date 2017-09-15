@@ -1,9 +1,10 @@
-# Image.Aesthetics.Learning
-Code and data for my paper at ACM SIGIR 2017 - **Social Media Advertisement Outreach: Learning the Role of Aesthetics** [[pdf]](https://arxiv.org/abs/1705.02146)
+# image-aesthetics-learning
+
+Implementation of the model, and datasets presented in the paper *[Social Media Advertisement Outreach: Learning the Role of Aesthetics](https://arxiv.org/abs/1705.02146)*, by [Avikalp Srivastava](https://github.com/Avikalp7), [Madhav Datt](https://github.com/madhav-datt), [Jaikrishna Chaparala](https://github.com/jaikrishna-ch), Shubham Mangla, and Priyadarshi Patnaik, presented at the 40th International ACM SIGIR Conference on Research and Development in Information Retrieval, Tokyo, Japan, 2017.
 
 ![](./SIGIR2017_Poster.jpg)
 
-## Aesthetic Feature to Engagement Learning on Photnet Data
+## Aesthetic Feature to Engagement Learning on PhotoNet Data
 
 ### Photo.Net Dataset
 
@@ -59,4 +60,10 @@ Column 9: Tesseract OCR Text
 Column 10: Correcltly Downloaded? (Local)
 
 Column 11: [NeuralTalk2](https://github.com/karpathy/neuraltalk2) Text
+
+
+## Feedback
+Feedback is greatly appreciated. If you have any questions, comments, issues or anything else really, [shoot me an email](mailto:avikalp22@iitkgp.ac.in).
+
+All rights reserved.
 

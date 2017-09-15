@@ -45,9 +45,9 @@ def main():
 		IH.append(IH_Current)
 
 
-	np.save('../../Data/IV_40p.npy',IV)
-	np.save('../../Data/IS_40p.npy',IS)
-	np.save('../../Data/IH_40p.npy',IH)
+	np.save('../../data/IV_40p.npy',IV)
+	np.save('../../data/IS_40p.npy',IS)
+	np.save('../../data/IH_40p.npy',IH)
 
 
 if __name__ == "__main__":

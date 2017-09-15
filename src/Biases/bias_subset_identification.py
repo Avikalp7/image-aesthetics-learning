@@ -11,9 +11,9 @@ import math
 
 
 def main():
-	reader = csv.reader(open('../../Data/TwitterData.csv', 'r'))
+	reader = csv.reader(open('../../data/TwitterData.csv', 'r'))
 	ocr_list_basic = ["discount ", "offer ", "scheme", "retweet", "rt", "off ", "sale", "% "]
-	ocr_list_extended = np.load("../../Data/discount_terms.npy")
+	ocr_list_extended = np.load("../../data/discount_terms.npy")
 	ocr_list = ocr_list_basic + ocr_list_extended
 	tweet_list = ["#national", "#international"]
 	neural_list = ["cat ", "dog ", "bird "]
@@ -53,17 +53,17 @@ def main():
 	print("Human vs Animal split : " + "\nHuman : " + str(neural_human_count) + "\nAnimal : " + str(neural_count))
 	# print("The length of the list is " + str(len(bias_list)))
 	# print(len(bias_list))
-	np.save('../../Data/human_bias.npy', human)
-	np.save('../../Data/animal_bias.npy', animal)
-	np.save('../../Data/tweet_bias.npy', tweet)
-	np.save('../../Data/sale_bias.npy', sale)
-	np.save('../../Data/holiday_bias.npy', holiday)
+	np.save('../../data/human_bias.npy', human)
+	np.save('../../data/animal_bias.npy', animal)
+	np.save('../../data/tweet_bias.npy', tweet)
+	np.save('../../data/sale_bias.npy', sale)
+	np.save('../../data/holiday_bias.npy', holiday)
 
-	h = list(np.load('../../Data/human_bias.npy'))
-	a = list(np.load('../../Data/animal_bias.npy'))
-	t = list(np.load('../../Data/tweet_bias.npy'))
-	s = list(np.load('../../Data/sale_bias.npy'))
-	hol = list(np.load('../../Data/holiday_bias.npy'))
+	h = list(np.load('../../data/human_bias.npy'))
+	a = list(np.load('../../data/animal_bias.npy'))
+	t = list(np.load('../../data/tweet_bias.npy'))
+	s = list(np.load('../../data/sale_bias.npy'))
+	hol = list(np.load('../../data/holiday_bias.npy'))
 
 	bias = h +  a + t + s + hol
 	unbias = [x for x in range(7963)]
@@ -73,8 +73,8 @@ def main():
 	np.save('../../Data/unbias.npy', unbias)
 	np.save('../../Data/bias.npy', bias)
 	reader = csv.reader(open('/home/avikalp/semester6/SIGIR/implementation/image_data/output5_norm_score.csv', 'r'))
-	bias = np.load('../../Data/unbias.npy')
-	unbias = np.load('../../Data/bias.npy')
+	bias = np.load('../../data/unbias.npy')
+	unbias = np.load('../../data/bias.npy')
 
 	c = 1
 	bias_score, unbias_score = [], []
@@ -89,8 +89,8 @@ def main():
 			unbias_count += 1
 		c += 1
 
-	np.save('../../Data/bias_scores.npy', bias_score)
-	np.save('../../Data/unbias_scores.npy', unbias_score)
+	np.save('../../data/bias_scores.npy', bias_score)
+	np.save('../../data/unbias_scores.npy', unbias_score)
 	print(np.mean(bias_score), np.std(bias_score))
 	print(np.mean(unbias_score), np.std(unbias_score))
 

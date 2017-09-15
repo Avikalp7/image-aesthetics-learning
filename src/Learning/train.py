@@ -12,7 +12,7 @@ def classifier_data(y, lower_threshold = 0.4, upper_threshold = 0.6):
 
 
 def load_data(classify_data = False):
-	X = np.load('../../Data/normalised_feature_vecs.npy')
+	X = np.load('../../data/normalised_feature_vecs.npy')
 	m = X.shape[0]
 	n = X.shape[1]
 	y = np.load('scores.npy')
@@ -52,7 +52,7 @@ if __name__ == '__main__':
 	save_model(clf)
 
 	# Reading model
-	clf = pickle.load( open( "../../Data/model.p", "rb" ) )
+	clf = pickle.load( open( "../../data/model.p", "rb" ) )
 
 	prediction = clf.predict(testX)
 	
