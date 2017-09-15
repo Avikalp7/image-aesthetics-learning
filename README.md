@@ -23,6 +23,10 @@ The script for features - "*selected_features.py*" resides in the "FeatureExtrac
 
 ![](./images/sigir1.png)
 
+Apart from these 56 initial features, we append features based on regional adjacency graphs and their normalized-cuts. The following images demonstrate the initial cuts and the cuts after normalization.
+
+![](./images/Figure_1.png)
+
 
 ### Getting the Advertisement Data and Learning
 
