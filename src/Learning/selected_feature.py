@@ -1,3 +1,8 @@
+"""
+Constructing the final feature vectors with selected features from the initial 56
+along with RAG cut features.
+"""
+
 from __future__ import division
 from scipy import misc
 import numpy as np
@@ -726,4 +731,4 @@ if __name__ == '__main__':
 
 		# del feature_vec[i][:]
 
-np.save('selected_feature_vecs.npy', feature_vec)
+np.save('../../data/selected_feature_vecs.npy', feature_vec)

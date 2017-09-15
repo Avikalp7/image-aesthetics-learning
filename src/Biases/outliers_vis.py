@@ -1,3 +1,7 @@
+"""
+Script for score outlier elimination and visualization
+"""
+
 import numpy as np
 from scipy.optimize import curve_fit
 from scipy.stats import norm
@@ -7,7 +11,6 @@ import scipy.special as sps
 
 def func(x_values, maximum_y, maximum_x, sigma): 
     t = maximum_y*np.exp(-(x_values-np.mean(x_values))**2/(2*sigma**2))
-    # print('t: ',t)
     return t
 
 

@@ -1,3 +1,10 @@
+"""
+Use this script to scrape the Photo.Net images, from the urls in the csv
+Please note that some images will fail to download as they might no longer exist,
+For such images, the indices will be absent from the good_indices.npy file.
+A message on the terminal will also be displayed for the files that failed to donwload.
+"""
+
 import numpy as np
 
 import urllib.request

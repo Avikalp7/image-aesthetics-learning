@@ -1,3 +1,10 @@
+"""
+Script for working with features related to Regional Adjacency Graphs (RAG's) 
+and cut normalizations. These features are appended with the initial 56 features
+in the final model.
+"""
+
+
 from skimage import data, segmentation, color, io
 from skimage.future import graph
 from matplotlib import pyplot as plt

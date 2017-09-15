@@ -1,14 +1,15 @@
 """
-Code to go through the image dataset and save LUV matrix associated
+Code to go through the image dataset and save LUV matrix associated 
+For the 40 percent sampled data, saves the matrix at ../../data/LUV_40p.npy
 """
 
 from scipy import misc
-import numpy as np
 from skimage import color
 from skimage import data
+from PIL import Image
+import numpy as np
 import os
 import PIL
-from PIL import Image
 
 
 path = "/home/avikalp/semester6/BS/twitter_images/img"

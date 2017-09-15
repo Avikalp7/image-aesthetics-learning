@@ -1,8 +1,8 @@
 """
 Work in this script will involve reading the ocr, neural-talk and tweet-text associated
-with each twitter image in the dataset.
-A subset of biases are identified here.
+with each twitter image in the dataset. A subset of biases are identified here.
 """
+
 import numpy as np
 
 import os
@@ -12,15 +12,20 @@ import math
 
 def main():
 	reader = csv.reader(open('../../data/TwitterData.csv', 'r'))
+	
 	ocr_list_basic = ["discount ", "offer ", "scheme", "retweet", "rt", "off ", "sale", "% "]
 	ocr_list_extended = np.load("../../data/discount_terms.npy")
 	ocr_list = ocr_list_basic + ocr_list_extended
+	
 	tweet_list = ["#national", "#international"]
+	
 	neural_list = ["cat ", "dog ", "bird "]
 	neural_human = ["human ", "man ", "woman "]
+	
 	dates = ["2016-12-19", "2016-12-20", "2016-12-21", "2016-12-22", "2016-12-23", "2016-12-24", "2016-12-25", "2016-12-26", 
 	"2016-12-27", "2016-12-28", "2016-12-29", "2016-12-30", "2016-12-31", "2017-12-1", "2016-10-25", "2016-10-26"
 	"2016-10-27", "2016-10-28", "2016-10-29", "2016-10-30", "2016-10-31", "2016-11-28", "2016-11-25"]
+	
 	bias_list = []
 
 	human, animal, sale, tweet, holiday = [], [], [], [], []
@@ -49,10 +54,10 @@ def main():
 			animal.append(count)
 			neural_count += 1
 		count += 1
+
 	print("Bias split : \nOCR : " + str(ocr_count) + "\nTweet Text : " + str(tweet_count) + "\nSpecial Occassions " + str(date_count))
 	print("Human vs Animal split : " + "\nHuman : " + str(neural_human_count) + "\nAnimal : " + str(neural_count))
-	# print("The length of the list is " + str(len(bias_list)))
-	# print(len(bias_list))
+	
 	np.save('../../data/human_bias.npy', human)
 	np.save('../../data/animal_bias.npy', animal)
 	np.save('../../data/tweet_bias.npy', tweet)

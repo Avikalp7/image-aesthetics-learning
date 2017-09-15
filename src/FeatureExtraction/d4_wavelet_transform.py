@@ -1,3 +1,7 @@
+"""
+Script for wavelet transform functions
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 import pywt

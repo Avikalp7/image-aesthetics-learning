@@ -1,3 +1,8 @@
+"""
+Initial script for extraction of a subset of the 56 features used
+in the 2006 ECCV paper. The nx56 matrix, for n images, is saved in ../../data/features.npy
+"""
+
 from __future__ import division
 
 from scipy import misc
@@ -293,7 +298,7 @@ if __name__ == '__main__':
 
 		# del feature_vec[i][:]
 
-np.save('feature_vecs.npy', feature_vec)
+np.save('../../data/feature_vecs.npy', feature_vec)
 
 
 

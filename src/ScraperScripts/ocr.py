@@ -2,6 +2,7 @@
 Extracting text from images with Tesseract OCR
 To run this code first install the pytesseract library from git
 """
+
 import pytesseract
 from PIL import Image
 
